@@ -1,0 +1,94 @@
+$body-color: black;
+$body-margin: 0 auto;
+
+$left-width: 50%;
+$left-bgcolor: rgb(126, 169, 177);
+$left-float: left;
+$left-height: 100vh;
+
+$button-bgcolor: #4CAF50;
+$button-border: none;
+$button-color: white;
+$button-padding:15px 32px;
+$button-textAlign:center;
+$button-textDecoration:none;
+$button-display:inline-block;
+$button-fontSize:16px;
+$button-borderRadius:25px;
+$button-position:relative;
+$button-left:3%;
+$button-marginTop:2%;
+
+$table-padding:10px;
+$table-borderCollapse: collapse;
+$table-tableLayout: fixed;
+
+$Former-marginLeft:30%;
+$Former-width: 45%;
+
+$td-wordWrap: break-word;
+$td-overflowWrap: break-word;
+
+
+@mixin display($display) {
+  display: $display;
+}
+
+@mixin tab($border,$padding,$textAlign) {
+    border: $border;
+    padding: $padding;
+    text-align: $textAlign;
+}
+
+
+body {
+  color: $body-color;
+  margin: $body-margin;
+}
+
+#left {
+  width: $left-width;
+  background-color: $left-bgcolor;
+  float: $left-float;
+  height: $left-height;
+}
+
+button {
+  background-color: $button-bgcolor;
+  border: $button-border;
+  color: $button-color;
+  padding: $button-padding;
+  text-align: $button-textAlign;
+  text-decoration: $button-textDecoration;
+  display: $button-display;
+  font-size: $button-fontSize;
+  border-radius: $button-borderRadius;
+  position: $button-position;
+  left: $button-left;
+  margin-top: $button-marginTop;
+}
+
+input, textarea, label { 
+  @include display(block)
+} 
+
+.tabela {
+    padding: $table-padding;
+    border-collapse: $table-borderCollapse;
+    table-layout: $table-tableLayout;
+}
+
+#Former {
+    margin-left: $Former-marginLeft;
+    width: $Former-width;
+}
+
+table, th, td {
+  @include tab(1px solid black,15px,center )
+}
+
+td {
+  word-wrap: $td-wordWrap;
+  overflow-wrap: $td-overflowWrap;
+}
+
